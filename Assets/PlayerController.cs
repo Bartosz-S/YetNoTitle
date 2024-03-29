@@ -7,85 +7,74 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField, Delayed] private float movementSpeed;
-
-    private Vector2 movementInput;
-    private Controls controls;
-    [SerializeField] private Player choosePlayer;
-    private enum Player
+    public enum PlayerNumber
     {
+        [HideInInspector]
         None,
         Player1,
         Player2,
     }
 
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private PlayerNumber playerNumber = PlayerNumber.Player1;
+
+    private Controls controls;
+    private InputAction moveInput;
+    private InputAction actionInput;
+
+    private Vector2 MovementInput => moveInput.ReadValue<Vector2>();
+
     private void Awake()
     {
-        switch (choosePlayer)
-        {
-            case Player.None:
-                break;
-            case Player.Player1:
-                controls = new Controls();
-                controls.Enable();
-                break;
-            case Player.Player2:
-                controls = new Controls();
-                controls.Enable();
-                break;
-        }
+        controls = new Controls();
+        controls.Enable();
+        SetPlayer(playerNumber);
     }
 
     private void OnEnable()
     {
-        ActivatePlayers();
+        ConnectActions();
     }
 
     private void OnDisable()
     {
-        DeactivatePlayers();
+        DisconnectActions();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        transform.Translate(movementSpeed * Time.deltaTime * new Vector2(movementInput.x, movementInput.y));
-    } 
+        transform.Translate(movementSpeed * Time.deltaTime * new Vector2(MovementInput.x, MovementInput.y));
+    }
 
-    public void OnMovement(InputAction.CallbackContext context) => movementInput = context.ReadValue<Vector2>();
+    private void OnInteraction(InputAction.CallbackContext context) => Debug.LogWarning("Action button pressed!");
 
-    public void OnInteraction(InputAction.CallbackContext context) => Debug.LogWarning("Action button pressed!");
-
-    public void ActivatePlayers()
+    private void ConnectActions()
     {
-        controls.Gameplay.Enable();
-        switch (choosePlayer)
+        if(actionInput != null)
+            actionInput.performed += OnInteraction;
+    }
+
+    private void DisconnectActions()
+    {
+        if (actionInput != null)
+            actionInput.performed -= OnInteraction;
+    }
+
+    public void SetPlayer(PlayerNumber playerNumber)
+    {
+        this.playerNumber = playerNumber;
+        DisconnectActions();
+        switch (playerNumber)
         {
-            case Player.Player1:
-                controls.Gameplay.InteractionP1.performed += OnInteraction;
-                controls.Gameplay.MoveP1.performed += OnMovement;
+            case PlayerNumber.Player1:
+                actionInput = controls.Gameplay.InteractionP1;
+                moveInput = controls.Gameplay.MoveP1;
                 break;
-            case Player.Player2:
-                controls.Gameplay.InteractionP2.performed += OnInteraction;
-                controls.Gameplay.MoveP2.performed += OnMovement;
+            case PlayerNumber.Player2:
+                actionInput = controls.Gameplay.InteractionP2;
+                moveInput = controls.Gameplay.MoveP2;
                 break;
         }
+        ConnectActions();
     }
-
-    public void DeactivatePlayers()
-    {
-        controls.Gameplay.Disable();
-        switch (choosePlayer)
-        {
-            case Player.Player1:
-                controls.Gameplay.InteractionP1.performed -= OnInteraction;
-                controls.Gameplay.MoveP1.performed -= OnMovement;
-                break;
-            case Player.Player2:
-                controls.Gameplay.InteractionP2.performed -= OnInteraction;
-                controls.Gameplay.MoveP2.performed -= OnMovement;
-                break;
-        }
-    }
-
 }
