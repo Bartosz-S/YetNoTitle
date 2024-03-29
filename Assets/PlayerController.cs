@@ -1,15 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public enum PlayerNumber
     {
-        [HideInInspector]
+        [InspectorName(null)]
         None,
         Player1,
         Player2,
