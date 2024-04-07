@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4196605619103538295}
   - component: {fileID: 5977647113034667501}
   - component: {fileID: 1487834792330599384}
+  - component: {fileID: 433076084169488219}
+  - component: {fileID: 791639767380887410}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -119,3 +121,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
+  playerNumber: 1
+--- !u!114 &433076084169488219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452547442342553361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1c6e4ec947cd54aad650bd6d45ed20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 100
+--- !u!114 &791639767380887410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452547442342553361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3baa7aaba7ef48419e9ecbf68030b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
