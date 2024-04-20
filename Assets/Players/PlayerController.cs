@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private InputAction actionInput;
 
     private Vector2 MovementInput => moveInput.ReadValue<Vector2>();
-
+    
     private void Awake()
     {
         controls = new Controls();
@@ -44,13 +44,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnInteraction(InputAction.CallbackContext context) => Debug.LogWarning("Action button pressed!");
 
-    private void ConnectActions()
+    public void ConnectActions()
     {
         if(actionInput != null)
             actionInput.performed += OnInteraction;
     }
 
-    private void DisconnectActions()
+    public void DisconnectActions()
     {
         if (actionInput != null)
             actionInput.performed -= OnInteraction;
@@ -73,4 +73,6 @@ public class PlayerController : MonoBehaviour
         }
         ConnectActions();
     }
+
+    
 }

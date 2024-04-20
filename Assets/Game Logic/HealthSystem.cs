@@ -19,17 +19,12 @@ public class HealthSystem : MonoBehaviour
         Debug.Log(healthPoints);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int damageValue)
     {
-
-    }
-
-    public void takeDamage(int damage)
-    {
-        if (healthPoints - damage > 0)
+        if (healthPoints - damageValue > 0)
         {
-            healthPoints -= damage;
+            healthPoints -= damageValue;
+            Debug.LogWarning("You took damage! Your hp: " + healthPoints);
         }
         else
         {
@@ -38,11 +33,11 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
-    public void takeHealing(int healing)
+    public void TakeHealing(int healingValue)
     {
-        if (healthPoints + healing < maxHealthPoints)
+        if (healthPoints + healingValue < maxHealthPoints)
         {
-            healthPoints += healing;
+            healthPoints += healingValue;
         }
         else
         {
@@ -58,13 +53,17 @@ public class HealthSystem : MonoBehaviour
     [ContextMenu("Take 10 damage")]
     void Take10Damage()
     {
-        takeDamage(10);
+        TakeDamage(10);
         Debug.Log(healthPoints);
     }
     [ContextMenu("Heal 10 damage")]
     void Heal10Damage()
     {
-        takeHealing(10);
+        TakeHealing(10);
         Debug.Log(healthPoints);
     }
 }
+
+
+
+

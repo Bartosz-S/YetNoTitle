@@ -7,6 +7,7 @@ public class PlayerLogic : MonoBehaviour
 {
     private bool isPlayerAlive = true;
     HealthSystem PlayerHealthSystem;
+    [SerializeField] private PlayerController controller = null;
 
     private void Awake()
     {
@@ -33,7 +34,7 @@ public class PlayerLogic : MonoBehaviour
         if (isPlayerAlive)
         {
             isPlayerAlive = false;
-            gameObject.SetActive(false);
+            controller.DisconnectActions();
         }
     }
     [ContextMenu("Respawn player")]
@@ -42,7 +43,7 @@ public class PlayerLogic : MonoBehaviour
         if(!isPlayerAlive)
         {
             isPlayerAlive = true;
-            gameObject.SetActive(true);
+            controller.ConnectActions();
         }
     }
 }
