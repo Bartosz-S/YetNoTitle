@@ -20,15 +20,15 @@ public class PlayerToCamera : MonoBehaviour
 
     void PlayersOutOfBondsCheck()
     {
-        if(Math.Abs(transform.position.y*2) >= mainCamera.orthographicSize*2 * mainCamera.aspect
-            || Math.Abs(transform.position.x) / (mainCamera.orthographicSize * mainCamera.aspect) >= mainCamera.aspect)
+        if(Math.Abs(transform.position.y*1.5) >= mainCamera.orthographicSize * mainCamera.aspect
+            || (Math.Abs(transform.position.x)/(mainCamera.orthographicSize * mainCamera.aspect)) >= mainCamera.aspect)
         {
             Debug.LogWarning("You're out of bonds!");
-            StopThePlayer();
+            StopPlayer();
         }
     }
 
-    void StopThePlayer()
+    void StopPlayer()
     {
         
     }

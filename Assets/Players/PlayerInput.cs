@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerInput : MonoBehaviour
 {
     public enum PlayerNumber
     {
@@ -54,6 +54,15 @@ public class PlayerController : MonoBehaviour
     {
         if (actionInput != null)
             actionInput.performed -= OnInteraction;
+    }
+
+    public void DisableControls()
+    {
+        controls.Disable();
+    }
+    public void EnableControls()
+    {
+        controls.Enable();
     }
 
     public void SetPlayer(PlayerNumber playerNumber)

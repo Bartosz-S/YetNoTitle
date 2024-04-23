@@ -1,66 +1,73 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthSystem : MonoBehaviour
 {
-    [SerializeField] private int maxHealthPoints;
+    [SerializeField] private protected int maxHealthPoints;
     private int healthPoints;
-    private bool isAlive = true;
 
-    private void Awake()
+    
+
+    public bool IsAlive => HealthPoints > 0;
+
+    public int HealthPoints
     {
-        healthPoints = maxHealthPoints;
+        get { return healthPoints; }
+        set
+        {
+            if(healthPoints != value)
+            {
+                healthPoints = value;
+                onHealthChange.Invoke();
+            }
+        }
     }
 
-    // Start is called before the first frame update
+    public UnityEvent onHealthChange = new UnityEvent();
+
     void Start()
     {
-        Debug.Log(healthPoints);
+        Debug.Log(HealthPoints);
     }
 
     public void TakeDamage(int damageValue)
     {
-        if (healthPoints - damageValue > 0)
+        if (HealthPoints - damageValue > 0)
         {
-            healthPoints -= damageValue;
-            Debug.LogWarning("You took damage! Your hp: " + healthPoints);
+            HealthPoints -= damageValue;
+            Debug.LogWarning("You took damage! Your hp: " + HealthPoints);
         }
         else
         {
-            healthPoints = 0;
-            isAlive = false;
+            HealthPoints = 0;
         }
     }
 
     public void TakeHealing(int healingValue)
     {
-        if (healthPoints + healingValue < maxHealthPoints)
+        if (HealthPoints + healingValue < maxHealthPoints)
         {
-            healthPoints += healingValue;
+            HealthPoints += healingValue;
         }
         else
         {
-            healthPoints = maxHealthPoints;
+            HealthPoints = maxHealthPoints;
         }
-    }
-
-    public bool GetIsAlive()
-    {
-        return isAlive;
     }
 
     [ContextMenu("Take 10 damage")]
     void Take10Damage()
     {
         TakeDamage(10);
-        Debug.Log(healthPoints);
+        Debug.Log(HealthPoints);
     }
     [ContextMenu("Heal 10 damage")]
     void Heal10Damage()
     {
         TakeHealing(10);
-        Debug.Log(healthPoints);
+        Debug.Log(HealthPoints);
     }
 }
 
