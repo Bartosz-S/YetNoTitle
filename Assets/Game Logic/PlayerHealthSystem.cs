@@ -10,7 +10,7 @@ public class PlayerHealthSystem : HealthSystem
 
     private void Awake()
     {
-        TakeHealing(maxHealthPoints);
+        RespawnPlayer();
         onHealthChange.AddListener(IfHealthChanged);
     }
 
@@ -25,12 +25,18 @@ public class PlayerHealthSystem : HealthSystem
     [ContextMenu("Kill player")]
     public void KillPlayer()
     {
-        Controller.DisableControls();
+        if(Controller.isActiveAndEnabled) 
+        {
+            Controller.DisableControls();
+        }
     }
     [ContextMenu("Respawn player")]
     public void RespawnPlayer()
     {
-        Controller.EnableControls();
+        if (!Controller.isActiveAndEnabled)
+        {
+            Controller.EnableControls();
+        }
         HealthPoints = maxHealthPoints;
     }
     [ContextMenu("Check HP")]
