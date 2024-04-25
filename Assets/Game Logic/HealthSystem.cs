@@ -8,8 +8,6 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private protected int maxHealthPoints;
     private int healthPoints;
 
-    
-
     public bool IsAlive => HealthPoints > 0;
 
     public int HealthPoints
@@ -55,6 +53,17 @@ public class HealthSystem : MonoBehaviour
         {
             HealthPoints = maxHealthPoints;
         }
+    }
+
+    [ContextMenu("Kill unit")]
+    public void KillUnit()
+    {
+        TakeDamage(maxHealthPoints);
+    }
+    [ContextMenu("Respawn unit")]
+    public void RespawnUnit()
+    {
+        TakeHealing(maxHealthPoints);
     }
 
     [ContextMenu("Take 10 damage")]

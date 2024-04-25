@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -1573656250520858219}
   - component: {fileID: 3533262602163034144}
   - component: {fileID: 1466745407228212618}
+  - component: {fileID: 7824391929449532775}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -179,7 +180,8 @@ MonoBehaviour:
   onHealthChange:
     m_PersistentCalls:
       m_Calls: []
-  Controller: {fileID: 1487834792330599384}
+  SpawnPoint: {x: 0, y: 0, z: 0}
+  container: {fileID: 7824391929449532775}
 --- !u!114 &1487834792330599384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   playerNumber: 1
+  container: {fileID: 7824391929449532775}
 --- !u!114 &-1573656250520858219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,3 +234,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502ef6f5f4a63b34aa6d826503fe941c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7824391929449532775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452547442342553361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbfdabe691472ba4591f5509703ba103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playersHealthSystem: {fileID: 5054198883083656062}
+  playersInput: {fileID: 1487834792330599384}

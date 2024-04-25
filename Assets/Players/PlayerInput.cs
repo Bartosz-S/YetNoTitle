@@ -13,6 +13,7 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField] private float movementSpeed;
     [SerializeField] private PlayerNumber playerNumber = PlayerNumber.Player1;
+    [SerializeField] private PlayerReferenceContainer container;
 
     private Controls controls;
     private InputAction moveInput;
@@ -25,6 +26,15 @@ public class PlayerInput : MonoBehaviour
         controls = new Controls();
         controls.Enable();
         SetPlayer(playerNumber);
+        container.PlayersHealthSystem.onHealthChange.AddListener(OnDeath);
+    }
+
+    private void OnDeath()
+    {
+        if (!container.PlayersHealthSystem.IsAlive)
+        {
+            controls.Disable();
+        }
     }
 
     private void OnEnable()

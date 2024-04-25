@@ -6,38 +6,28 @@ using UnityEngine;
 public class PlayerHealthSystem : HealthSystem
 {
     [SerializeField] private Vector3 SpawnPoint;
-    [SerializeField] private PlayerInput Controller = null;
+    [SerializeField] private PlayerReferenceContainer container = null;
+    private PlayerInput PlayInput = null;
 
     private void Awake()
     {
+        PlayInput = container.GetComponent<PlayerInput>();
         RespawnPlayer();
-        onHealthChange.AddListener(IfHealthChanged);
-    }
-
-    private void IfHealthChanged()
-    {
-        if (!IsAlive)
-        {
-            KillPlayer();
-        }
     }
 
     [ContextMenu("Kill player")]
     public void KillPlayer()
     {
-        if(Controller.isActiveAndEnabled) 
-        {
-            Controller.DisableControls();
-        }
+        TakeDamage(maxHealthPoints);
     }
     [ContextMenu("Respawn player")]
     public void RespawnPlayer()
     {
-        if (!Controller.isActiveAndEnabled)
+        if (!container.PlayersInput.enabled)
         {
-            Controller.EnableControls();
+            container.PlayersInput.EnableControls();
         }
-        HealthPoints = maxHealthPoints;
+        TakeHealing(maxHealthPoints);
     }
     [ContextMenu("Check HP")]
     public void CheckPlayerHP()
