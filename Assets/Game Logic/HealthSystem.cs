@@ -18,9 +18,12 @@ public class HealthSystem : MonoBehaviour
             if(healthPoints != value)
             {
                 healthPoints = value;
-                onHealthChange.Invoke();
             }
         }
+    }
+
+    public int MaxHealthPoints {
+        get { return maxHealthPoints; }
     }
 
     public UnityEvent onHealthChange = new UnityEvent();
@@ -36,8 +39,9 @@ public class HealthSystem : MonoBehaviour
         {
             HealthPoints -= damageValue;
             Debug.LogWarning("You took damage! Your hp: " + HealthPoints);
-        }
-        else
+            onHealthChange.Invoke();
+
+        } else
         {
             HealthPoints = 0;
         }
@@ -48,10 +52,12 @@ public class HealthSystem : MonoBehaviour
         if (HealthPoints + healingValue < maxHealthPoints)
         {
             HealthPoints += healingValue;
-        }
-        else
+            onHealthChange.Invoke();
+
+        } else
         {
             HealthPoints = maxHealthPoints;
+            onHealthChange.Invoke();
         }
     }
 
