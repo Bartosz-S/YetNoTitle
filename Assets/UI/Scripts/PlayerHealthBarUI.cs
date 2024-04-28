@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class PlayerHealthBarUI : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    [SerializeField] private PlayerReferenceContainer player;
     [SerializeField] private Image healthBar;
 
+
+    private void Awake() {
+        player.PlayersHealthSystem.onHealthChange.AddListener(OnHealthChanged);
+    }
     public void OnHealthChanged() {
-        HealthSystem playerHealth = player.GetComponent<HealthSystem>();
-        healthBar.fillAmount = (float)playerHealth.HealthPoints / playerHealth.MaxHealthPoints;
+        healthBar.fillAmount = (float)player.PlayersHealthSystem.HealthPoints / player.PlayersHealthSystem.MaxHealthPoints;
     }
 
 
