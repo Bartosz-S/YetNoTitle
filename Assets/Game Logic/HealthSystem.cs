@@ -39,12 +39,14 @@ public class HealthSystem : MonoBehaviour
         {
             HealthPoints -= damageValue;
             Debug.LogWarning("You took damage! Your hp: " + HealthPoints);
-            onHealthChange.Invoke();
+            
 
         } else
         {
             HealthPoints = 0;
+            
         }
+        onHealthChange.Invoke();
     }
 
     public void TakeHealing(int healingValue)
