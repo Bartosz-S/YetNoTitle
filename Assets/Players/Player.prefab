@@ -197,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playersHealthSystem: {fileID: 5054198883083656062}
   playersInput: {fileID: 1487834792330599384}
+  playersVisuals: {fileID: 7952253134930282220}
 --- !u!1 &5626374986696006580
 GameObject:
   m_ObjectHideFlags: 0

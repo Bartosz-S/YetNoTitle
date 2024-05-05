@@ -6,6 +6,8 @@ public class PlayerReferenceContainer : MonoBehaviour
 {
     [SerializeField] private HealthSystem playersHealthSystem;
     [SerializeField] private PlayerInput playersInput;
+    [SerializeField] private PlayerVisuals playersVisuals;
+
 
     public HealthSystem PlayersHealthSystem
     {
@@ -13,6 +15,9 @@ public class PlayerReferenceContainer : MonoBehaviour
     }
     public PlayerInput PlayersInput { 
         get { return playersInput; }
+    }
+    public PlayerVisuals PlayersVisuals {
+        get { return playersVisuals; }
     }
 
 }
