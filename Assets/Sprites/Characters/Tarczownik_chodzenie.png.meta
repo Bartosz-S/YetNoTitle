@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 66daa2d4fb47e114fac67dc821780257
+guid: eb200c32058e3464bbb37e74d779094c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,148 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animacja_chodzenie_barabarzynca_in_progress_0
+      name: Tarczownik_chodzenie_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 10
-        width: 53
-        height: 63
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 758dea3257e09df40818728bb1ae84cd
-      internalID: 674843093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacja_chodzenie_barabarzynca_in_progress_1
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 10
-        width: 56
+        x: 9
+        y: 0
+        width: 50
         height: 61
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0f27298cb248e8429313096b32a848d
-      internalID: 284162076
+      spriteID: 6e8622c663ea931448fd809a1ea87db1
+      internalID: -1253251603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacja_chodzenie_barabarzynca_in_progress_2
+      name: Tarczownik_chodzenie_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1
+        width: 51
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df45b3d6c9483f2438c218ebffcc57b6
+      internalID: -465422107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarczownik_chodzenie_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4481a668899be41b467337e67ac343
+      internalID: -1255556132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarczownik_chodzenie_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1
+        width: 51
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a77548ed4d74940b2f408266808da6
+      internalID: -1988580224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarczownik_chodzenie_4
       rect:
         serializedVersion: 2
         x: 263
-        y: 10
-        width: 52
-        height: 66
+        y: 1
+        width: 50
+        height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7608403f8e211e54db78dd06340041ea
-      internalID: 206726593
+      spriteID: 5b03f9b52bf7b3049b889880f4cb9447
+      internalID: -1389414967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacja_chodzenie_barabarzynca_in_progress_3
+      name: Tarczownik_chodzenie_5
       rect:
         serializedVersion: 2
-        x: 393
-        y: 9
-        width: 45
-        height: 68
+        x: 326
+        y: 2
+        width: 51
+        height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b22328b2a0817af44883ba81ac79cbac
-      internalID: -880587669
+      spriteID: 21c06b132fd0f8b4f8c64700256a1c22
+      internalID: 35716249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacja_chodzenie_barabarzynca_in_progress_4
+      name: Tarczownik_chodzenie_6
       rect:
         serializedVersion: 2
-        x: 523
-        y: 9
-        width: 45
-        height: 65
+        x: 391
+        y: 0
+        width: 50
+        height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 324fbe38f1b0c6f4c99aad00de518b43
-      internalID: 594389113
+      spriteID: 2734d814a80ebed4d80417a5a9710134
+      internalID: -553778061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacja_chodzenie_barabarzynca_in_progress_5
+      name: Tarczownik_chodzenie_7
       rect:
         serializedVersion: 2
-        x: 651
-        y: 10
-        width: 44
-        height: 63
+        x: 455
+        y: 1
+        width: 51
+        height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8cb57673fa008b42ac322405032fbe4
-      internalID: 305447490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacja_chodzenie_barabarzynca_in_progress_6
-      rect:
-        serializedVersion: 2
-        x: 780
-        y: 10
-        width: 44
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 282bae38f7172fc488b3eebbdf542c11
-      internalID: -964021784
+      spriteID: 748a7b49347e00a42b08d108d9dee772
+      internalID: -521979937
       vertices: []
       indices: 
       edges: []
@@ -267,13 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animacja_chodzenie_barabarzynca_in_progress_0: 674843093
-      animacja_chodzenie_barabarzynca_in_progress_1: 284162076
-      animacja_chodzenie_barabarzynca_in_progress_2: 206726593
-      animacja_chodzenie_barabarzynca_in_progress_3: -880587669
-      animacja_chodzenie_barabarzynca_in_progress_4: 594389113
-      animacja_chodzenie_barabarzynca_in_progress_5: 305447490
-      animacja_chodzenie_barabarzynca_in_progress_6: -964021784
+      Tarczownik_chodzenie_0: -1253251603
+      Tarczownik_chodzenie_1: -465422107
+      Tarczownik_chodzenie_2: -1255556132
+      Tarczownik_chodzenie_3: -1988580224
+      Tarczownik_chodzenie_4: -1389414967
+      Tarczownik_chodzenie_5: 35716249
+      Tarczownik_chodzenie_6: -553778061
+      Tarczownik_chodzenie_7: -521979937
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

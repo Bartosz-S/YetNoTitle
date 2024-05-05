@@ -14,13 +14,13 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private PlayerNumber playerNumber = PlayerNumber.Player1;
     [SerializeField] private PlayerReferenceContainer container;
-    [SerializeField] private Rigidbody2D rigidbody2D;
+    [SerializeField] private Rigidbody2D rb2D;
 
     private Controls controls;
     private InputAction moveInput;
     private InputAction actionInput;
 
-    private Vector2 MovementInput => moveInput.ReadValue<Vector2>();
+    public Vector2 MovementInput => moveInput.ReadValue<Vector2>();
     
     private void Awake()
     {
@@ -53,7 +53,7 @@ public class PlayerInput : MonoBehaviour
         //previous version with using tranfsorm position
         //transform.Translate(movementSpeed * Time.deltaTime * new Vector2(MovementInput.x, MovementInput.y));
         //New version with using rigidbody to avoid shaking when collision detected
-        if (MovementInput != null) {
+        if (MovementInput != new Vector2(0,0)) {
             Move();
         }
     }
@@ -105,7 +105,7 @@ public class PlayerInput : MonoBehaviour
         position.x += movement.x * movementSpeed * Time.deltaTime;
         position.y += movement.y * movementSpeed * Time.deltaTime;
 
-        rigidbody2D.MovePosition(position);
+        rb2D.MovePosition(position);
     }
 
     
