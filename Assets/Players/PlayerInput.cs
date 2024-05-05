@@ -14,6 +14,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private PlayerNumber playerNumber = PlayerNumber.Player1;
     [SerializeField] private PlayerReferenceContainer container;
+    [SerializeField] private Rigidbody2D rigidbody2D;
 
     private Controls controls;
     private InputAction moveInput;
@@ -49,7 +50,12 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(movementSpeed * Time.deltaTime * new Vector2(MovementInput.x, MovementInput.y));
+        //previous version with using tranfsorm position
+        //transform.Translate(movementSpeed * Time.deltaTime * new Vector2(MovementInput.x, MovementInput.y));
+        //New version with using rigidbody to avoid shaking when collision detected
+        if (MovementInput != null) {
+            Move();
+        }
     }
 
     private void OnInteraction(InputAction.CallbackContext context) => Debug.LogWarning("Action button pressed!");
@@ -91,6 +97,15 @@ public class PlayerInput : MonoBehaviour
                 break;
         }
         ConnectActions();
+    }
+
+    private void Move() {
+        Vector3 position = transform.position;
+        Vector2 movement = new Vector2(MovementInput.x, MovementInput.y);
+        position.x += movement.x * movementSpeed * Time.deltaTime;
+        position.y += movement.y * movementSpeed * Time.deltaTime;
+
+        rigidbody2D.MovePosition(position);
     }
 
     

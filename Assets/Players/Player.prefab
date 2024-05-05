@@ -197,6 +197,7 @@ MonoBehaviour:
   movementSpeed: 10
   playerNumber: 1
   container: {fileID: 7824391929449532775}
+  rigidbody2D: {fileID: -3681088441286784675}
 --- !u!114 &-1573656250520858219
 MonoBehaviour:
   m_ObjectHideFlags: 0
