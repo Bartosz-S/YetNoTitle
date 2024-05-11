@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private PlayerNumber playerNumber = PlayerNumber.Player1;
     [SerializeField] private PlayerReferenceContainer container;
     [SerializeField] private Rigidbody2D rb2D;
+    [SerializeField] private GameObject gameOverUI;
 
     private Controls controls;
     private InputAction moveInput;
@@ -48,6 +50,7 @@ public class PlayerInput : MonoBehaviour
         if (!container.PlayersHealthSystem.IsAlive)
         {
             controls.Disable();
+            gameOverUI.SetActive(true);
         } 
     }
 
