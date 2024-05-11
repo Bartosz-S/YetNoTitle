@@ -30,12 +30,25 @@ public class PlayerInput : MonoBehaviour
         container.PlayersHealthSystem.onHealthChange.AddListener(OnDeath);
     }
 
+    private void FixedUpdate() {
+        if (MovementInput != new Vector2(0, 0)) {
+            Move();
+        } else {
+            rb2D.velocity = new Vector2(0, 0);
+        }
+    }
+    private void Update() {
+        //previous version with using tranfsorm position
+        //transform.Translate(movementSpeed * Time.deltaTime * new Vector2(MovementInput.x, MovementInput.y));
+        //New version with using rigidbody to avoid shaking when collision detected
+        
+    }
     private void OnDeath()
     {
         if (!container.PlayersHealthSystem.IsAlive)
         {
             controls.Disable();
-        }
+        } 
     }
 
     private void OnEnable()
@@ -46,16 +59,6 @@ public class PlayerInput : MonoBehaviour
     private void OnDisable()
     {
         DisconnectActions();
-    }
-
-    private void Update()
-    {
-        //previous version with using tranfsorm position
-        //transform.Translate(movementSpeed * Time.deltaTime * new Vector2(MovementInput.x, MovementInput.y));
-        //New version with using rigidbody to avoid shaking when collision detected
-        if (MovementInput != new Vector2(0,0)) {
-            Move();
-        }
     }
 
     private void OnInteraction(InputAction.CallbackContext context) => Debug.LogWarning("Action button pressed!");
@@ -102,10 +105,10 @@ public class PlayerInput : MonoBehaviour
     private void Move() {
         Vector3 position = transform.position;
         Vector2 movement = new Vector2(MovementInput.x, MovementInput.y);
-        position.x += movement.x * movementSpeed * Time.deltaTime;
-        position.y += movement.y * movementSpeed * Time.deltaTime;
+        position.x = movement.x * movementSpeed * Time.deltaTime;
+        position.y = movement.y * movementSpeed * Time.deltaTime;
 
-        rb2D.MovePosition(position);
+        rb2D.velocity = position;
     }
 
     

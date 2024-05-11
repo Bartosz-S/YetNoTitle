@@ -25,6 +25,5 @@ public class PlayerVisuals : MonoBehaviour
 
     private void TakeDamageAnimationTrigger() {
         animator.SetTrigger("TakingDamage");
-        Debug.Log("Event OnHealthChange");
     }
 }

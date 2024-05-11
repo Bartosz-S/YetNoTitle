@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28e1aeba2af1314886c967ee2cffbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 150
   playerNumber: 1
   container: {fileID: 7824391929449532775}
   rb2D: {fileID: -3681088441286784675}
@@ -317,6 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3994b3e29a711b43bfde06004b401b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 1487834792330599384}
+  playerReferenceContainer: {fileID: 0}
   animator: {fileID: 2654729718899787171}
   spriteRenderer: {fileID: 1574154000258050941}
