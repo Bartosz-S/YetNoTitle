@@ -8,19 +8,26 @@ public class PlayerVisuals : MonoBehaviour
     [SerializeField] private PlayerReferenceContainer playerReferenceContainer;
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    bool lastFlipX;
 
     private void Start() {
         playerReferenceContainer.PlayersHealthSystem.onHealthChange.AddListener(TakeDamageAnimationTrigger);
     }
-    private void Update() {
+    private void Update() {      
         if (playerReferenceContainer.PlayersInput.MovementInput != new Vector2(0, 0)) {
 
             animator.SetBool("IsWalking", true);
+            if (playerReferenceContainer.PlayersInput.MovementInput.x < 0f) {
+                spriteRenderer.flipX = true;
+            } 
+            if (playerReferenceContainer.PlayersInput.MovementInput.x > 0f){
+                spriteRenderer.flipX = false;
+            }
         } else {
             animator.SetBool("IsWalking", false);
         }
         // flips sprite to the moving direction
-        spriteRenderer.flipX = playerReferenceContainer.PlayersInput.MovementInput.x < 0f;
+        Debug.Log(playerReferenceContainer.PlayersInput.MovementInput.x);
     }
 
     private void TakeDamageAnimationTrigger() {
