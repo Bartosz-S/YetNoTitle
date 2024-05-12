@@ -1,4 +1,3 @@
-using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -65,18 +64,7 @@ public class PlayerInput : MonoBehaviour
         DisconnectActions();
     }
 
-    private void OnInteraction(InputAction.CallbackContext context)
-    {
-        try
-        {
-            container.PlayersAttack.Attack();
-        }
-        catch(Exception e)
-        {
-            container.PlayersBlock.Block();
-        }
-        
-    }
+    private void OnInteraction(InputAction.CallbackContext context) => Debug.LogWarning("Action button pressed!");
 
     public void ConnectActions()
     {

@@ -68,10 +68,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7824391929449532775, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
-      propertyPath: playersAttack
-      value: 
-      objectReference: {fileID: 5352666548986778516}
     - target: {fileID: 7952253134930282220, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
       propertyPath: playerReferenceContainer
       value: 
@@ -79,37 +75,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4452547442342553361, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5352666548986778516}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
 --- !u!114 &3824259146669382530 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7824391929449532775, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
   m_PrefabInstance: {fileID: 6451314587127092965}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7227446314389697012}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbfdabe691472ba4591f5509703ba103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &7227446314389697012 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4452547442342553361, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
-  m_PrefabInstance: {fileID: 6451314587127092965}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5352666548986778516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7227446314389697012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19e5154726525a74e9daf10abd46b8f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageValue: 20
