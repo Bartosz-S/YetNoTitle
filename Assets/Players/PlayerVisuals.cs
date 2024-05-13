@@ -26,8 +26,6 @@ public class PlayerVisuals : MonoBehaviour
         } else {
             animator.SetBool("IsWalking", false);
         }
-        // flips sprite to the moving direction
-        Debug.Log(playerReferenceContainer.PlayersInput.MovementInput.x);
     }
 
     private void TakeDamageAnimationTrigger() {
