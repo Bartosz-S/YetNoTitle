@@ -64,7 +64,17 @@ public class PlayerInput : MonoBehaviour
         DisconnectActions();
     }
 
-    private void OnInteraction(InputAction.CallbackContext context) => Debug.LogWarning("Action button pressed!");
+    private void OnInteraction(InputAction.CallbackContext context)
+    {
+        try
+        {
+            container.PlayersAttack.Attack();
+        }
+        catch 
+        {
+            container.PlayersBlock.Block();
+        }
+    }
 
     public void ConnectActions()
     {
