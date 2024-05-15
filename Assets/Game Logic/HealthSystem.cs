@@ -39,7 +39,6 @@ public class HealthSystem : MonoBehaviour
         {
             HealthPoints -= damageValue;
             Debug.LogWarning("You took damage! Your hp: " + HealthPoints);
-            
 
         } else
         {
@@ -54,13 +53,12 @@ public class HealthSystem : MonoBehaviour
         if (HealthPoints + healingValue < maxHealthPoints)
         {
             HealthPoints += healingValue;
-            onHealthChange.Invoke();
 
         } else
         {
             HealthPoints = maxHealthPoints;
-            onHealthChange.Invoke();
         }
+        onHealthChange.Invoke();
     }
 
     [ContextMenu("Kill unit")]

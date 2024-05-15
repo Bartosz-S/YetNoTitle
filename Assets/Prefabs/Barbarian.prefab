@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1987945968415000506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4330470540739815731}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4330470540739815731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987945968415000506}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.313, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 339116489292436218}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6451314587127092965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,12 +109,20 @@ PrefabInstance:
       objectReference: {fileID: 3824259146669382530}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6715822287108523039, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4330470540739815731}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4452547442342553361, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6824022481713538543}
   m_SourcePrefab: {fileID: 100100000, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
+--- !u!4 &339116489292436218 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6715822287108523039, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
+  m_PrefabInstance: {fileID: 6451314587127092965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3824259146669382530 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7824391929449532775, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
@@ -112,4 +151,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f82286bc16110e4382a773e1972465a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damageValue: 30
+  attackRange: 2

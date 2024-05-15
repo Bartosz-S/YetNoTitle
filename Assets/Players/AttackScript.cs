@@ -1,31 +1,46 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AttackScript : MonoBehaviour
 {
     private List<Collider2D> enemies;
-    private List<HealthSystem> enemiesHPs = new List<HealthSystem>();
+
     [SerializeField] private int damageValue;
+    [SerializeField] private float attackRange;
+    //[SerializeField] private double attackRate;
+    
+
+    private int enemyLayer;
+    
+
+    private void Awake()
+    {
+        enemyLayer = LayerMask.NameToLayer("Enemies");
+    }
 
     public void Attack()
     {
-        foreach (GameObject gameObjects in GameObject.FindGameObjectsWithTag("Enemy"))
-        {
-            enemiesHPs.Add(gameObjects.GetComponent<HealthSystem>());
-        }
+        enemies = Physics2D.OverlapCircleAll(transform.position, attackRange).ToList();
+
         foreach (Collider2D enemies in enemies)
         {
-            //enemiesHPs.Add(enemies.gameObject.GetComponent<HealthSystem>());
-        }
-        foreach (HealthSystem hp in enemiesHPs)
-        {
-            if (hp.IsAlive == false) continue;
+            if(enemies.gameObject.layer != enemyLayer)
+            {
+                continue;
+            }
+            else enemies.gameObject.GetComponent<HealthSystem>().TakeDamage(damageValue);
 
-            hp.TakeDamage(damageValue);
         }
-        enemiesHPs.Clear();
-
+        
         Debug.Log("Attack!");
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
 }

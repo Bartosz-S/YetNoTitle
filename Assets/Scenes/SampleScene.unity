@@ -12242,8 +12242,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.00000002379494, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5251899, y: 1.9063989, z: -10}
+  m_LocalRotation: {x: 1e-45, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6112629, y: 1.9063989, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12540,7 +12540,7 @@ Transform:
   m_GameObject: {fileID: 1806215558}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5251899, y: 1.9063989, z: 0}
+  m_LocalPosition: {x: -1.6112629, y: 1.9063989, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12556,7 +12556,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 339116489292436218, guid: 4b76aa8f5b059354db1cf6e789d198a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8878534
+      value: -1.06
       objectReference: {fileID: 0}
     - target: {fileID: 339116489292436218, guid: 4b76aa8f5b059354db1cf6e789d198a5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12598,12 +12598,21 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 1975799457}
+    - target: {fileID: 6824022481713538543, guid: 4b76aa8f5b059354db1cf6e789d198a5, type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824022481713538543, guid: 4b76aa8f5b059354db1cf6e789d198a5, type: 3}
+      propertyPath: damageValue
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7227446314389697012, guid: 4b76aa8f5b059354db1cf6e789d198a5, type: 3}
       propertyPath: m_Name
       value: Barbarian
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1987945968415000506, guid: 4b76aa8f5b059354db1cf6e789d198a5, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b76aa8f5b059354db1cf6e789d198a5, type: 3}
@@ -13000,8 +13009,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061709123}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.00000002379494, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5251899, y: 1.9063989, z: -10}
+  m_LocalRotation: {x: 1e-45, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6112629, y: 1.9063989, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
