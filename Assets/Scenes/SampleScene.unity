@@ -12900,6 +12900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShieldCarier
       objectReference: {fileID: 0}
+    - target: {fileID: 2648542064160855668, guid: 28c364390492a1a43b8a1a919aacc958, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4915756503096063354, guid: 28c364390492a1a43b8a1a919aacc958, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1625261

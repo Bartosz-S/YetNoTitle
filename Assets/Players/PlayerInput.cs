@@ -69,14 +69,7 @@ public class PlayerInput : MonoBehaviour
 
     private void OnInteraction(InputAction.CallbackContext context)
     {
-        try
-        {
-            container.PlayersAttack.Attack();
-        }
-        catch 
-        {
-            container.PlayersBlock.Block();
-        }
+        container.PlayersAction.Use();
     }
 
     public void ConnectActions()
@@ -126,5 +119,6 @@ public class PlayerInput : MonoBehaviour
 
         rb2D.velocity = position;
     }
+    
     
 }

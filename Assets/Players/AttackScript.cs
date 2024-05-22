@@ -4,17 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class AttackScript : MonoBehaviour
+public class AttackScript : ActionScript
 {
-    private List<Collider2D> enemies;
+    private List<Collider2D> enemies = new List<Collider2D>();
 
     [SerializeField] private int damageValue;
-    [SerializeField] private float attackRange;
-    //[SerializeField] private double attackRate;
-    
-
+    [SerializeField] private double attackRate;
+    [SerializeField] private Collider2D AttackField;
     private int enemyLayer;
-    
+
+    public override void Use()
+    {
+        Attack();
+        
+    }
 
     private void Awake()
     {
@@ -23,8 +26,7 @@ public class AttackScript : MonoBehaviour
 
     public void Attack()
     {
-        enemies = Physics2D.OverlapCircleAll(transform.position, attackRange).ToList();
-
+        if (enemies.Count() == 0) return;
         foreach (Collider2D enemies in enemies)
         {
             if(enemies.gameObject.layer != enemyLayer)
@@ -38,9 +40,12 @@ public class AttackScript : MonoBehaviour
         Debug.Log("Attack!");
     }
 
-    private void OnDrawGizmos()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Gizmos.DrawWireSphere(transform.position, attackRange);
+        if(!enemies.Contains(collision)) { enemies.Add(collision); }
     }
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (enemies.Contains(collision)) { enemies.Remove(collision); }
+    }
 }
