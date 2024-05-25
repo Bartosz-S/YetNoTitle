@@ -36,11 +36,7 @@ public class PlayerInput : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (MovementInput != new Vector2(0, 0)) {
-            Move();
-        } else {
-            rb2D.velocity = new Vector2(0, 0);
-        }
+        Move();
     }
     private void Update() {
         //previous version with using tranfsorm position
@@ -119,12 +115,10 @@ public class PlayerInput : MonoBehaviour
     }
 
     private void Move() {
-        Vector3 position = transform.position;
-        Vector2 movement = new Vector2(MovementInput.x, MovementInput.y);
-        position.x = movement.x * movementSpeed * Time.deltaTime;
-        position.y = movement.y * movementSpeed * Time.deltaTime;
+        Vector3 movement = transform.position;
+        movement = MovementInput * movementSpeed * Time.deltaTime;
 
-        rb2D.velocity = position;
+        rb2D.velocity = movement;
     }
     
 }
