@@ -8,6 +8,8 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private protected int maxHealthPoints;
     private int healthPoints;
 
+    public UnityEvent onHealthChange = new UnityEvent();
+
     public bool IsAlive => HealthPoints > 0;
 
     public int HealthPoints
@@ -26,7 +28,6 @@ public class HealthSystem : MonoBehaviour
         get { return maxHealthPoints; }
     }
 
-    public UnityEvent onHealthChange = new UnityEvent();
 
     void Start()
     {
@@ -44,7 +45,7 @@ public class HealthSystem : MonoBehaviour
         } else
         {
             HealthPoints = 0;
-            
+
         }
         onHealthChange.Invoke();
     }

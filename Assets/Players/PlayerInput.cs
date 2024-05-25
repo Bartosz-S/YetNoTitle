@@ -19,7 +19,6 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private PlayerNumber playerNumber = PlayerNumber.Player1;
     [SerializeField] private PlayerReferenceContainer container;
     [SerializeField] private Rigidbody2D rb2D;
-    [SerializeField] private GameObject gameOverUI;
 
     private Controls controls;
     private InputAction moveInput;
@@ -38,18 +37,12 @@ public class PlayerInput : MonoBehaviour
     private void FixedUpdate() {
         Move();
     }
-    private void Update() {
-        //previous version with using tranfsorm position
-        //transform.Translate(movementSpeed * Time.deltaTime * new Vector2(MovementInput.x, MovementInput.y));
-        //New version with using rigidbody to avoid shaking when collision detected
-        
-    }
+
     private void OnDeath()
     {
         if (!container.PlayersHealthSystem.IsAlive)
         {
             controls.Disable();
-            gameOverUI.SetActive(true);
         } 
     }
 
