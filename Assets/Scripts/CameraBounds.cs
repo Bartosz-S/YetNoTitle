@@ -40,8 +40,8 @@ public class CameraBounds : MonoBehaviour
     }
     private void SetPosition(Transform player, BoxCollider2D playerBC2D) {
         Vector3 playerPosition = player.position;
-        playerPosition.x = Mathf.Clamp(playerPosition.x, screenXmin + playerBC2D.size.x / 2, screenXmax - playerBC2D.size.x / 2);
-        playerPosition.y = Mathf.Clamp(playerPosition.y, screenYmin - playerBC2D.size.y / 2, screenYmax - playerBC2D.size.y / 2);
+        playerPosition.x = Mathf.Clamp(playerPosition.x, screenXmin + playerBC2D.size.x, screenXmax - playerBC2D.size.x);
+        playerPosition.y = Mathf.Clamp(playerPosition.y, screenYmin - playerBC2D.size.y, screenYmax - playerBC2D.size.y);
         player.position = playerPosition;
     }
 
