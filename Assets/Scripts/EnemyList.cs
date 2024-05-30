@@ -30,7 +30,7 @@ public class EnemyList : MonoBehaviour
     }
 
     private void EnemyDeathBehaviour_OnAnyEnemyDeath(object sender, EventArgs e) {
-        enemyList.RemoveAt(0);
+        enemyList.Remove((EnemyDeathBehaviour)sender);
         OnEnemyListUpdate?.Invoke(this, EventArgs.Empty);
     }
 

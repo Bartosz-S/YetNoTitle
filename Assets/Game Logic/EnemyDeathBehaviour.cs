@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class EnemyDeathBehaviour : MonoBehaviour
 {
     public static event EventHandler OnAnyEnemyDeath;
+
     public Sprite deathAnimPrefab; // Reference to the deathAnimation prefab
     public HealthSystem healthSystem;
     public float deathAnimDestroyDelay = 0.5f; // Delay before destroying the deathAnim object
