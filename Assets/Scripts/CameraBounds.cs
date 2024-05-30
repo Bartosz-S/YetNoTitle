@@ -8,8 +8,6 @@ public class CameraBounds : MonoBehaviour
 {
     [SerializeField] private Transform player1;
     [SerializeField] private Transform player2;
-    [SerializeField] private BoxCollider2D player1BC2D;
-    [SerializeField] private BoxCollider2D player2BC2D;
     [SerializeField] private Transform targetGroup;
     [SerializeField] private CinemachineVirtualCamera cinemachineCamera;
 
@@ -22,12 +20,7 @@ public class CameraBounds : MonoBehaviour
 
     private void Start() {
         cinemachineFramingTransposer = cinemachineCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
-        float cameraScopeRatio =
-            cinemachineFramingTransposer.m_MaximumFOV / cinemachineFramingTransposer.m_MinimumFOV;
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        screenBounds.x = screenBounds.x * cameraScopeRatio;
-        screenBounds.y = screenBounds.y * cameraScopeRatio;
-        screenBounds.z = screenBounds.z * cameraScopeRatio;
         TargetGroupUpdate();
     }
 
@@ -35,13 +28,13 @@ public class CameraBounds : MonoBehaviour
     void Update()
     {
         TargetGroupUpdate();
-        SetPosition(player1, player1BC2D);
-        SetPosition(player2, player1BC2D);
+        SetPosition(player1);
+        SetPosition(player2);
     }
-    private void SetPosition(Transform player, BoxCollider2D playerBC2D) {
+    private void SetPosition(Transform player) {
         Vector3 playerPosition = player.position;
-        playerPosition.x = Mathf.Clamp(playerPosition.x, screenXmin + playerBC2D.size.x, screenXmax - playerBC2D.size.x);
-        playerPosition.y = Mathf.Clamp(playerPosition.y, screenYmin - playerBC2D.size.y, screenYmax - playerBC2D.size.y);
+        playerPosition.x = Mathf.Clamp(playerPosition.x, screenXmin , screenXmax);
+        playerPosition.y = Mathf.Clamp(playerPosition.y, screenYmin , screenYmax);
         player.position = playerPosition;
     }
 

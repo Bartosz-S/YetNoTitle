@@ -14,14 +14,14 @@ public class GameWinField : MonoBehaviour
     }
 
 
-    private void OnTriggerStay2D(Collider2D collision) {
+    private void OnTriggerEnter2D(Collider2D collision) {
         GameObject player = collision.gameObject;
         if (player.CompareTag("Player")) {
             if(listOfPlayers.Contains(player)) {
                 return;
             }
             listOfPlayers.Add(player);
-            if(listOfPlayers.Count == 2 && GameObject.FindGameObjectsWithTag("Enemies").Length == 0) {
+            if(listOfPlayers.Count == 2 && EnemyList.Instance.GetEnemyListCount() == 0) {
                 OnBothPlayersStayInWinZone.Invoke();
             }
         }
