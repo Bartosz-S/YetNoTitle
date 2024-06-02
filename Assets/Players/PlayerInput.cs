@@ -3,6 +3,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
@@ -24,6 +25,11 @@ public class PlayerInput : MonoBehaviour
     private Controls controls;
     private InputAction moveInput;
     private InputAction actionInput;
+    public InputAction MoveInput
+    {
+        get { return moveInput; }
+        private set { }
+    }
 
     public Vector2 MovementInput => moveInput.ReadValue<Vector2>();
     
@@ -70,12 +76,14 @@ public class PlayerInput : MonoBehaviour
     private void OnInteraction(InputAction.CallbackContext context)
     {
         container.PlayersAction.Use();
+        
     }
 
     public void ConnectActions()
     {
         if(actionInput != null)
             actionInput.performed += OnInteraction;
+            
     }
 
     public void DisconnectActions()
@@ -83,7 +91,7 @@ public class PlayerInput : MonoBehaviour
         if (actionInput != null)
             actionInput.performed -= OnInteraction;
     }
-
+    
     public void DisableControls()
     {
         controls.Disable();
@@ -119,6 +127,4 @@ public class PlayerInput : MonoBehaviour
 
         rb2D.velocity = position;
     }
-    
-    
 }

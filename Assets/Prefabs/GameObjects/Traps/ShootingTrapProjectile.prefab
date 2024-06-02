@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7947531085437991651}
   - component: {fileID: 2662650501649413412}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 3636873752895586177}
   - component: {fileID: 2183256217515924668}
   - component: {fileID: 4326425687239684917}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootingTrapProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,6 +193,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3605dbb3dd5f62748a62c78197bd1606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2D: {fileID: 3636873752895586177}
-  projectileSpeed: 10
-  shootingTrap: {fileID: 0}

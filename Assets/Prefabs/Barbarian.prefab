@@ -192,6 +192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageValue: 30
-  attackRange: 2
-  attackRate: 0
+  attackCooldown: 1
   AttackField: {fileID: 1054225499637133101}
+  container: {fileID: 3824259146669382530}

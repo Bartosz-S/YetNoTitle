@@ -15,7 +15,7 @@ public class PlayerToCamera : MonoBehaviour
 
     public void Update()
     {
-        PlayersOutOfBondsCheck();
+        //PlayersOutOfBondsCheck();
     }
 
     void PlayersOutOfBondsCheck()

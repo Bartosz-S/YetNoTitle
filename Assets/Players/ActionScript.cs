@@ -5,4 +5,5 @@ using UnityEngine;
 public abstract class ActionScript : MonoBehaviour
 {
     public abstract void Use();
+    
 }
