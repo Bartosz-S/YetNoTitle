@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -3681088441286784675}
   - component: {fileID: 5054198883083656062}
   - component: {fileID: 1487834792330599384}
-  - component: {fileID: -1573656250520858219}
   - component: {fileID: 3533262602163034144}
   - component: {fileID: 1466745407228212618}
   - component: {fileID: 7824391929449532775}
@@ -146,18 +145,6 @@ MonoBehaviour:
   playerNumber: 1
   container: {fileID: 7824391929449532775}
   rb2D: {fileID: -3681088441286784675}
---- !u!114 &-1573656250520858219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4452547442342553361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8931998b8eef3474486a35dc4ea16d0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3533262602163034144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +185,7 @@ MonoBehaviour:
   playersHealthSystem: {fileID: 5054198883083656062}
   playersInput: {fileID: 1487834792330599384}
   playersVisuals: {fileID: 7952253134930282220}
+  playersAction: {fileID: 0}
 --- !u!1 &5626374986696006580
 GameObject:
   m_ObjectHideFlags: 0

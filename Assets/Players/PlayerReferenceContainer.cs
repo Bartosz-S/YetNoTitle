@@ -7,25 +7,22 @@ public class PlayerReferenceContainer : MonoBehaviour
     [SerializeField] private HealthSystem playersHealthSystem;
     [SerializeField] private PlayerInput playersInput;
     [SerializeField] private PlayerVisuals playersVisuals;
-    [SerializeField] private AttackScript playersAttack;
-    [SerializeField] private BlockScript playersBlock;
+    [SerializeField] private ActionScript playersAction;
 
     public HealthSystem PlayersHealthSystem
     {
         get { return playersHealthSystem; }
     }
-    public PlayerInput PlayersInput { 
+    public PlayerInput PlayersInput
+    {
         get { return playersInput; }
     }
-    public PlayerVisuals PlayersVisuals {
+    public PlayerVisuals PlayersVisuals
+    {
         get { return playersVisuals; }
     }
-    public AttackScript PlayersAttack
+    public ActionScript PlayersAction
     {
-        get { return playersAttack; }
-    }
-    public BlockScript PlayersBlock
-    {
-        get { return playersBlock; }
+        get { return playersAction; }
     }
 }

@@ -24,6 +24,12 @@ public class PlayerInput : MonoBehaviour
     private InputAction moveInput;
     private InputAction actionInput;
 
+    public InputAction MoveInput
+    {
+        get { return moveInput; }
+        private set { }
+    }
+
     public Vector2 MovementInput => moveInput.ReadValue<Vector2>();
     
     private void Awake()
@@ -58,14 +64,7 @@ public class PlayerInput : MonoBehaviour
 
     private void OnInteraction(InputAction.CallbackContext context)
     {
-        try
-        {
-            container.PlayersAttack.Attack();
-        }
-        catch 
-        {
-            container.PlayersBlock.Block();
-        }
+        container.PlayersAction.Use();
     }
 
     public void ConnectActions()
