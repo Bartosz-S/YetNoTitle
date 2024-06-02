@@ -1037,6 +1037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ace23388ffab1344e803e6247c66bf62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyCountText: {fileID: 0}
 --- !u!1 &247419035
 GameObject:
   m_ObjectHideFlags: 0
@@ -17097,6 +17098,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f686f0ddda671694e87a760ce2c5a492, type: 3}
+--- !u!1001 &486927534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5437201050501886642, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
+      propertyPath: m_Name
+      value: GameWinField
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534092608403949782, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -103.933235
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534092608403949782, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 62.918385
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534092608403949782, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534092608403949782, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534092608403949782, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534092608403949782, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534092608403949782, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534092608403949782, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534092608403949782, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534092608403949782, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5085a72c1047f164baf8b8ee95a53837, type: 3}
 --- !u!1 &489518258
 GameObject:
   m_ObjectHideFlags: 0
@@ -42202,11 +42260,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 339116489292436218, guid: 4b76aa8f5b059354db1cf6e789d198a5, type: 3}
   m_PrefabInstance: {fileID: 1859853832}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &1238244690 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 6825120542081011792, guid: 4b76aa8f5b059354db1cf6e789d198a5, type: 3}
-  m_PrefabInstance: {fileID: 1859853832}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1248688119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7596887022782140258, guid: f686f0ddda671694e87a760ce2c5a492, type: 3}
@@ -43653,11 +43706,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4915756503096063354, guid: 28c364390492a1a43b8a1a919aacc958, type: 3}
   m_PrefabInstance: {fileID: 2037871725}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &2017544918 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2178400952957958096, guid: 28c364390492a1a43b8a1a919aacc958, type: 3}
-  m_PrefabInstance: {fileID: 2037871725}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2037871725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43907,8 +43955,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 1238244682}
   player2: {fileID: 2017544910}
-  player1BC2D: {fileID: 1238244690}
-  player2BC2D: {fileID: 2017544918}
   targetGroup: {fileID: 1806215560}
   cinemachineCamera: {fileID: 2061709124}
 --- !u!1001 &2073683077
@@ -44540,3 +44586,4 @@ SceneRoots:
   - {fileID: 415846900}
   - {fileID: 1646637299}
   - {fileID: 2073683077}
+  - {fileID: 486927534}
