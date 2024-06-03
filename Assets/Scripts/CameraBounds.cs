@@ -20,6 +20,7 @@ public class CameraBounds : MonoBehaviour
 
     private void Start() {
         cinemachineFramingTransposer = cinemachineCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+        Camera.main.transform.position = new Vector3(0, 0, Camera.main.transform.position.z);
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         TargetGroupUpdate();
     }
