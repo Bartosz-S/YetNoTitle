@@ -8,11 +8,21 @@ public class GameWinField : MonoBehaviour
 {
     public UnityEvent OnBothPlayersStayInWinZone;
     private List<GameObject> listOfPlayers;
+    [SerializeField] private GameObject closeGatesSprite;
+    [SerializeField] private GameObject openGatesSprite;
+    private bool isGateOpen;
 
     private void Start() {
         listOfPlayers = new List<GameObject>();
+        closeGatesSprite.SetActive(true);
+        EnemyList.Instance.OnNoMoreEnemies += EnemyList_OnNoMoreEnemies;
     }
 
+    private void EnemyList_OnNoMoreEnemies(object sender, EventArgs e) {
+        isGateOpen = true;
+        closeGatesSprite.SetActive(false);
+        openGatesSprite.SetActive(true);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         GameObject player = collision.gameObject;
@@ -21,7 +31,7 @@ public class GameWinField : MonoBehaviour
                 return;
             }
             listOfPlayers.Add(player);
-            if(listOfPlayers.Count == 2 && EnemyList.Instance.GetEnemyListCount() == 0) {
+            if(listOfPlayers.Count == 2 && isGateOpen) {
                 OnBothPlayersStayInWinZone.Invoke();
             }
         }
