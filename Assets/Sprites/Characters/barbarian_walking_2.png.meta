@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb200c32058e3464bbb37e74d779094c
+guid: 84c8d7c495c50bd489cd89326f981a06
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tarczownik_chodzenie_0
+      name: barbarian_walking_2_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 0
         y: 0
-        width: 50
-        height: 61
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,125 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e8622c663ea931448fd809a1ea87db1
-      internalID: -1253251603
+      spriteID: c9f1d7e7e76396c41a2e6d24c7bc04a1
+      internalID: -1295729741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tarczownik_chodzenie_1
+      name: barbarian_walking_2_1
       rect:
         serializedVersion: 2
         x: 70
-        y: 1
-        width: 51
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df45b3d6c9483f2438c218ebffcc57b6
-      internalID: -465422107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tarczownik_chodzenie_2
-      rect:
-        serializedVersion: 2
-        x: 135
-        y: 1
-        width: 50
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b4481a668899be41b467337e67ac343
-      internalID: -1255556132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tarczownik_chodzenie_3
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 1
-        width: 51
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83a77548ed4d74940b2f408266808da6
-      internalID: -1988580224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tarczownik_chodzenie_4
-      rect:
-        serializedVersion: 2
-        x: 263
-        y: 1
-        width: 50
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b03f9b52bf7b3049b889880f4cb9447
-      internalID: -1389414967
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tarczownik_chodzenie_5
-      rect:
-        serializedVersion: 2
-        x: 326
-        y: 2
-        width: 51
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21c06b132fd0f8b4f8c64700256a1c22
-      internalID: 35716249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tarczownik_chodzenie_6
-      rect:
-        serializedVersion: 2
-        x: 391
         y: 0
-        width: 50
-        height: 62
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2734d814a80ebed4d80417a5a9710134
-      internalID: -553778061
+      spriteID: f78467fa5f1dade479e9f75a871f01be
+      internalID: -1829622275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tarczownik_chodzenie_7
+      name: barbarian_walking_2_2
       rect:
         serializedVersion: 2
-        x: 455
-        y: 1
-        width: 51
-        height: 60
+        x: 140
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +166,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 748a7b49347e00a42b08d108d9dee772
-      internalID: -521979937
+      spriteID: 51ff431226095d44690d2d0b827c8918
+      internalID: 775659749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barbarian_walking_2_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e89dcb41f1e4546a57f1af38dd0604
+      internalID: 41824126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barbarian_walking_2_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00568a003b45ff64a97cf93ecf7cd87c
+      internalID: 1491052245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barbarian_walking_2_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb42a9154422c84e961726337e18ebe
+      internalID: -284612209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barbarian_walking_2_6
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415700750a079cb40a9602055155621b
+      internalID: -518483855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barbarian_walking_2_7
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426dcff7ec3ac1a4eab9bcd0a7449ba9
+      internalID: 1584634806
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tarczownik_chodzenie_0: -1253251603
-      Tarczownik_chodzenie_1: -465422107
-      Tarczownik_chodzenie_2: -1255556132
-      Tarczownik_chodzenie_3: -1988580224
-      Tarczownik_chodzenie_4: -1389414967
-      Tarczownik_chodzenie_5: 35716249
-      Tarczownik_chodzenie_6: -553778061
-      Tarczownik_chodzenie_7: -521979937
+      barbarian_walking_2_0: -1295729741
+      barbarian_walking_2_1: -1829622275
+      barbarian_walking_2_2: 775659749
+      barbarian_walking_2_3: 41824126
+      barbarian_walking_2_4: 1491052245
+      barbarian_walking_2_5: -284612209
+      barbarian_walking_2_6: -518483855
+      barbarian_walking_2_7: 1584634806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
