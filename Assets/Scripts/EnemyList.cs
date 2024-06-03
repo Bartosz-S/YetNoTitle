@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyList : MonoBehaviour
-{
+public class EnemyList : MonoBehaviour {
     public static EnemyList Instance { get; private set; }
 
     public event EventHandler OnEnemyListUpdate;
@@ -18,12 +17,7 @@ public class EnemyList : MonoBehaviour
             return;
         }
         Instance = this;
-
-        enemyList = new List<EnemyDeathBehaviour>();
-        enemyArray = FindObjectsByType<EnemyDeathBehaviour>(FindObjectsSortMode.None);
-        foreach (EnemyDeathBehaviour enemy in enemyArray) {
-            enemyList.Add(enemy);
-        }
+        UpdateEnemyList();
     }
     private void Start() {
         EnemyDeathBehaviour.OnAnyEnemyDeath += EnemyDeathBehaviour_OnAnyEnemyDeath;
@@ -36,5 +30,13 @@ public class EnemyList : MonoBehaviour
 
     public int GetEnemyListCount() {
         return enemyList.Count;
+    }
+
+    private void UpdateEnemyList() {
+        enemyList = new List<EnemyDeathBehaviour>();
+        foreach(EnemyDeathBehaviour enemy in Resources.FindObjectsOfTypeAll(typeof(EnemyDeathBehaviour)) as EnemyDeathBehaviour[]) {
+            enemyList.Add(enemy);
+        }
+        OnEnemyListUpdate?.Invoke(this, EventArgs.Empty);
     }
 }

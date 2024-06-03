@@ -32,7 +32,6 @@ public class HealthSystem : MonoBehaviour
     void Start()
     {
         healthPoints = MaxHealthPoints;
-        Debug.Log(HealthPoints);
     }
 
     public void TakeDamage(int damageValue)
