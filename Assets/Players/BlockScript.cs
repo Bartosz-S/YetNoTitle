@@ -48,11 +48,7 @@ public class BlockScript : ActionScript
         if (BlockField.enabled == true)
         {
             container.PlayersInput.MoveInput.Disable();
-        }
-        if (Vector2.Angle(lastMovement, container.PlayersInput.MovementInput) != 0)
-        {
-            RotateInDirectionOfInput();
-            lastMovement = container.PlayersInput.MovementInput;
+            
         }
     }
 
@@ -61,15 +57,6 @@ public class BlockScript : ActionScript
         if (collision.gameObject.layer == projectilesLayer)
         {
             Destroy(collision.gameObject);
-        }
-    }
-
-    public void RotateInDirectionOfInput()
-    {
-        if (container.PlayersInput.MovementInput != Vector2.zero && lastMovement != Vector2.zero)
-        {
-            BlockField.transform.RotateAround(transform.position, Vector3.forward,
-                 Vector2.SignedAngle(Vector2.right, container.PlayersInput.MovementInput) - Vector2.SignedAngle(Vector2.right, lastMovement));
         }
     }
 }

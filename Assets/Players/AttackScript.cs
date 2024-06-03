@@ -75,12 +75,19 @@ public class AttackScript : ActionScript
         if (enemies.Contains(collision)) { enemies.Remove(collision); }
     }
 
+    Vector2 lastDirection = Vector2.right;
     public void RotateInDirectionOfInput()
     {
+        /*
         if (container.PlayersInput.MovementInput != Vector2.zero && lastMovement != Vector2.zero)
         {
             AttackField.transform.RotateAround(transform.position, Vector3.forward,
                  Vector2.SignedAngle(Vector2.right, container.PlayersInput.MovementInput) - Vector2.SignedAngle(Vector2.right, lastMovement));
+        }*/
+        if (Vector2.Angle(container.PlayersInput.MovementInput, lastDirection) > 90)
+        {
+            lastDirection *= new Vector2(-1, 1);
+            AttackField.transform.RotateAround(transform.position, Vector3.forward, 180);
         }
     }
 }
