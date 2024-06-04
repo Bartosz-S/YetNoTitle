@@ -9,6 +9,7 @@ public class PlayerVisuals : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Controls controls;
+    public Animator PlayerAnimator { get { return animator; } private set { } }
 
     private void Start() {
         playerReferenceContainer.PlayersHealthSystem.onHealthChange.AddListener(TakeDamageAnimationTrigger);
@@ -20,7 +21,7 @@ public class PlayerVisuals : MonoBehaviour
     }
 
     private void InteractionP1_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
-        animator.SetTrigger("Attack");
+        
     }
     private void InteractionP2_started(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
         animator.SetTrigger("Block");
