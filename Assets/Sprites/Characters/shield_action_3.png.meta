@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 84c8d7c495c50bd489cd89326f981a06
+guid: 6d4ac6c5b43daef40af2f338ebfcbf47
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: barbarian_walking_2_0
+      name: shield_action_3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 70
-        height: 70
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9f1d7e7e76396c41a2e6d24c7bc04a1
-      internalID: -1295729741
+      spriteID: bcaa9ce39e6cfcd4da210982726692e0
+      internalID: -708441152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barbarian_walking_2_1
+      name: shield_action_3_1
       rect:
         serializedVersion: 2
-        x: 70
+        x: 64
         y: 0
-        width: 70
-        height: 70
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f78467fa5f1dade479e9f75a871f01be
-      internalID: -1829622275
+      spriteID: eb2d7753ef60d6e4ea77ba63af6e1e90
+      internalID: -1584181724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barbarian_walking_2_2
+      name: shield_action_3_2
       rect:
         serializedVersion: 2
-        x: 140
+        x: 128
         y: 0
-        width: 70
-        height: 70
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51ff431226095d44690d2d0b827c8918
-      internalID: 775659749
+      spriteID: 020cf579b7c24794ebb67ea91a594280
+      internalID: -1841398900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barbarian_walking_2_3
+      name: shield_action_3_3
       rect:
         serializedVersion: 2
-        x: 210
+        x: 192
         y: 0
-        width: 70
-        height: 70
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30e89dcb41f1e4546a57f1af38dd0604
-      internalID: 41824126
+      spriteID: e8bd53e182687754f811ae5bf973bafd
+      internalID: -1419010966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barbarian_walking_2_4
+      name: shield_action_3_4
       rect:
         serializedVersion: 2
-        x: 280
+        x: 256
         y: 0
-        width: 70
-        height: 70
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00568a003b45ff64a97cf93ecf7cd87c
-      internalID: 1491052245
+      spriteID: a4d595e7d37292a4c8cca5c9b2b15b92
+      internalID: -167354024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barbarian_walking_2_5
+      name: shield_action_3_5
       rect:
         serializedVersion: 2
-        x: 350
+        x: 320
         y: 0
-        width: 70
-        height: 70
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbb42a9154422c84e961726337e18ebe
-      internalID: -284612209
+      spriteID: 551f67b4d11cbf84f9048931f841613a
+      internalID: 1241855976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barbarian_walking_2_6
+      name: shield_action_3_6
       rect:
         serializedVersion: 2
-        x: 420
+        x: 384
         y: 0
-        width: 70
-        height: 70
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 415700750a079cb40a9602055155621b
-      internalID: -518483855
+      spriteID: 466e806c7ee0a104698579aa5f06ed58
+      internalID: 58348344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barbarian_walking_2_7
+      name: shield_action_3_7
       rect:
         serializedVersion: 2
-        x: 490
+        x: 448
         y: 0
-        width: 70
-        height: 70
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 426dcff7ec3ac1a4eab9bcd0a7449ba9
-      internalID: 1584634806
+      spriteID: 4cfee17580482e74ca27786ac12896ae
+      internalID: 168472828
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      barbarian_walking_2_0: -1295729741
-      barbarian_walking_2_1: -1829622275
-      barbarian_walking_2_2: 775659749
-      barbarian_walking_2_3: 41824126
-      barbarian_walking_2_4: 1491052245
-      barbarian_walking_2_5: -284612209
-      barbarian_walking_2_6: -518483855
-      barbarian_walking_2_7: 1584634806
+      shield_action_3_0: -708441152
+      shield_action_3_1: -1584181724
+      shield_action_3_2: -1841398900
+      shield_action_3_3: -1419010966
+      shield_action_3_4: -167354024
+      shield_action_3_5: 1241855976
+      shield_action_3_6: 58348344
+      shield_action_3_7: 168472828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

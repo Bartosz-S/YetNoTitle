@@ -8,11 +8,28 @@ public class PlayerVisuals : MonoBehaviour
     [SerializeField] private PlayerReferenceContainer playerReferenceContainer;
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    bool lastFlipX;
+    private Controls controls;
 
     private void Start() {
         playerReferenceContainer.PlayersHealthSystem.onHealthChange.AddListener(TakeDamageAnimationTrigger);
+        controls = new Controls();
+        controls.Gameplay.Enable();
+        controls.Gameplay.InteractionP1.performed += InteractionP1_performed;
+        controls.Gameplay.InteractionP2.started += InteractionP2_started;
+        controls.Gameplay.InteractionP2.canceled += InteractionP2_canceled;
     }
+
+    private void InteractionP1_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        animator.SetTrigger("Attack");
+    }
+    private void InteractionP2_started(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        animator.SetTrigger("Block");
+        animator.SetBool("IsBlocking", true);
+    }
+    private void InteractionP2_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        animator.SetBool("IsBlocking", false);
+    }
+
     private void Update() {      
         if (playerReferenceContainer.PlayersInput.MovementInput != new Vector2(0, 0)) {
 
