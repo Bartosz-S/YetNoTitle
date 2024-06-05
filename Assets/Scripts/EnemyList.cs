@@ -25,6 +25,7 @@ public class EnemyList : MonoBehaviour {
         foreach(EnemyDeathBehaviour e in enemyArray) {
             enemyList.Add(e);
         }
+        Debug.Log(enemyList.Count);
         OnEnemyListCreated?.Invoke(this, EventArgs.Empty);
         EnemyDeathBehaviour.OnAnyEnemyDeath += EnemyDeathBehaviour_OnAnyEnemyDeath;
     }
