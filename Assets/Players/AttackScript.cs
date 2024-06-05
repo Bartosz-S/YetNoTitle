@@ -55,17 +55,15 @@ public class AttackScript : ActionScript
         }
         else
         {
-            container.PlayersVisuals.PlayerAnimator.SetTrigger("Attack");
+            container.PlayersVisuals.GetAnimator().SetTrigger("Attack");
             time = attackCooldown;
         }
-        Debug.Log("Attack!");
 
         if (enemies.Count() == 0) return;
         for (int i = enemies.Count-1; i >= 0; i--)
         {
             Collider2D enemies = this.enemies[i];
             enemies.gameObject.GetComponent<HealthSystem>().TakeDamage(damageValue);
-            
         }
     }
 

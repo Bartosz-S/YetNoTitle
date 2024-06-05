@@ -132,6 +132,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1716700048076456368, guid: b4c25385302631a4080d43a75b4487f2, type: 3}
+      propertyPath: deathAnimPrefab
+      value: 
+      objectReference: {fileID: 21300000, guid: d86f3d337258466459ec928c1cd25f95, type: 3}
+    - target: {fileID: -711573909260567018, guid: b4c25385302631a4080d43a75b4487f2, type: 3}
+      propertyPath: maxHealthPoints
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 726805952933838351, guid: b4c25385302631a4080d43a75b4487f2, type: 3}
       propertyPath: m_Size.x
       value: 0.5

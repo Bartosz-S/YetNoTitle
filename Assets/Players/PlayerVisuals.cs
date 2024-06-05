@@ -9,7 +9,6 @@ public class PlayerVisuals : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Controls controls;
-    public Animator PlayerAnimator { get { return animator; } private set { } }
 
     private void Start() {
         playerReferenceContainer.PlayersHealthSystem.onHealthChange.AddListener(TakeDamageAnimationTrigger);
@@ -21,14 +20,20 @@ public class PlayerVisuals : MonoBehaviour
     }
 
     private void InteractionP1_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
-        
+        if (playerReferenceContainer.PlayersInput.GetPlayerNumber() == PlayerInput.PlayerNumber.Player1) {
+            //animator.SetTrigger("Attack");
+        }
     }
     private void InteractionP2_started(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
-        animator.SetTrigger("Block");
-        animator.SetBool("IsBlocking", true);
+        if (playerReferenceContainer.PlayersInput.GetPlayerNumber() == PlayerInput.PlayerNumber.Player2) {
+            animator.SetTrigger("Block");
+            animator.SetBool("IsBlocking", true);
+        }
     }
     private void InteractionP2_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
-        animator.SetBool("IsBlocking", false);
+        if (playerReferenceContainer.PlayersInput.GetPlayerNumber() == PlayerInput.PlayerNumber.Player2) {
+            animator.SetBool("IsBlocking", false);
+        }
     }
 
     private void Update() {      
@@ -48,5 +53,8 @@ public class PlayerVisuals : MonoBehaviour
 
     private void TakeDamageAnimationTrigger() {
         animator.SetTrigger("TakingDamage");
+    }
+    public Animator GetAnimator() {
+        return animator;
     }
 }

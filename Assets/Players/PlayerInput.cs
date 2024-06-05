@@ -1,7 +1,3 @@
-using JetBrains.Annotations;
-using System;
-using Unity.VisualScripting;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -104,6 +100,10 @@ public class PlayerInput : MonoBehaviour
                 break;
         }
         ConnectActions();
+    }
+
+    public PlayerNumber GetPlayerNumber() {
+        return playerNumber;
     }
 
     private void Move() {
