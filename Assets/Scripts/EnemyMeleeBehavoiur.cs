@@ -37,16 +37,12 @@ public class MoveTowardsPlayer : MonoBehaviour
         // Get the Rigidbody component attached to the GameObject
         rb = GetComponent<Rigidbody2D>();
         playercurrent = player1;
+        EnemyList.Instance.OnEnemyListCreated += Instance_OnEnemyListCreated;
     }
 
-
-
-
-
-
-
-
-
+    private void Instance_OnEnemyListCreated(object sender, System.EventArgs e) {
+        gameObject.SetActive(false);
+    }
 
     private void FixedUpdate()
     {

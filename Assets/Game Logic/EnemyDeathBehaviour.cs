@@ -10,10 +10,6 @@ public class EnemyDeathBehaviour : MonoBehaviour
     public HealthSystem healthSystem;
     public float deathAnimDestroyDelay = 0.5f; // Delay before destroying the deathAnim object
 
-    private void Awake() {
-        gameObject.SetActive(true);
-    }
-
 
 
     void Start()
