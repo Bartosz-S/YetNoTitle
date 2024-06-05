@@ -42493,6 +42493,10 @@ PrefabInstance:
       value: EnemyCounter
       objectReference: {fileID: 0}
     - target: {fileID: 6900969869405099142, guid: f923a75e03fd458428f40709cbda2bee, type: 3}
+      propertyPath: m_text
+      value: 'Enemies left: 32'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900969869405099142, guid: f923a75e03fd458428f40709cbda2bee, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
       objectReference: {fileID: 0}
