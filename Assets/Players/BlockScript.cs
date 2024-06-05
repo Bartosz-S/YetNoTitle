@@ -21,7 +21,6 @@ public class BlockScript : ActionScript
     }
     public void Block()
     {
-        Debug.Log("Parry!");
         if (BlockField.enabled == true)
         {
             BlockField.enabled = false;

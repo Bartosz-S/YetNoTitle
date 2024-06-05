@@ -106,6 +106,10 @@ public class PlayerInput : MonoBehaviour
         ConnectActions();
     }
 
+    public PlayerNumber GetPlayerNumber() {
+        return playerNumber;
+    }
+
     private void Move() {
         Vector3 movement = transform.position;
         movement = MovementInput * movementSpeed * Time.deltaTime;

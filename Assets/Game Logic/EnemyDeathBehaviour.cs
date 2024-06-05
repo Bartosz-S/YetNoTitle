@@ -10,6 +10,10 @@ public class EnemyDeathBehaviour : MonoBehaviour
     public HealthSystem healthSystem;
     public float deathAnimDestroyDelay = 0.5f; // Delay before destroying the deathAnim object
 
+    private void Awake() {
+        gameObject.SetActive(true);
+    }
+
 
 
     void Start()
@@ -22,9 +26,11 @@ public class EnemyDeathBehaviour : MonoBehaviour
         {
             Debug.LogWarning("HealthSystem is not assigned!");
         }
+        gameObject.SetActive(false);
+
     }
 
-   void CheckAndDestroy()
+    void CheckAndDestroy()
     {
         if (healthSystem.HealthPoints <= 0)
         {
