@@ -61,7 +61,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -223,7 +223,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""80c61bea-778c-4cad-a486-fb8a379520aa"",
                     ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": ""Press(pressPoint=1.401298E-45,behavior=2)"",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""InteractionP2"",
@@ -234,7 +234,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""0539b0d9-37c2-4b4c-9706-b3b4e3fbd9df"",
                     ""path"": ""<Keyboard>/rightCtrl"",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": ""Press(pressPoint=1.401298E-45,behavior=2)"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""InteractionP2"",

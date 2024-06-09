@@ -18,6 +18,7 @@ public class AttackScript : ActionScript
     [SerializeField] private PlayerReferenceContainer container;
     private int enemyLayer;
     double time = 0;
+    public bool canAttack = true;
 
     public override void Use()
     {
@@ -49,20 +50,20 @@ public class AttackScript : ActionScript
     {
         if (time > 0)
         {
+            
             return;
         }
         else
         {
+            container.PlayersVisuals.GetAnimator().SetTrigger("Attack");
             time = attackCooldown;
         }
-        Debug.Log("Attack!");
 
         if (enemies.Count() == 0) return;
         for (int i = enemies.Count-1; i >= 0; i--)
         {
             Collider2D enemies = this.enemies[i];
             enemies.gameObject.GetComponent<HealthSystem>().TakeDamage(damageValue);
-            
         }
     }
 

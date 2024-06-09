@@ -39,8 +39,6 @@ public class HealthSystem : MonoBehaviour
         if (HealthPoints - damageValue > 0)
         {
             HealthPoints -= damageValue;
-            Debug.LogWarning("You took damage! Your hp: " + HealthPoints);
-
         } else
         {
             HealthPoints = 0;

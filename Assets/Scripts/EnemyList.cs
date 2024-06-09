@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class EnemyList : MonoBehaviour {
@@ -9,6 +7,7 @@ public class EnemyList : MonoBehaviour {
 
     public event EventHandler OnEnemyListUpdate;
     public event EventHandler OnNoMoreEnemies;
+    public event EventHandler OnEnemyListCreated;
     private EnemyDeathBehaviour[] enemyArray;
     private List<EnemyDeathBehaviour> enemyList;
 
@@ -19,9 +18,15 @@ public class EnemyList : MonoBehaviour {
             return;
         }
         Instance = this;
-        UpdateEnemyList();
     }
     private void Start() {
+        enemyList = new List<EnemyDeathBehaviour>();
+        enemyArray = FindObjectsByType<EnemyDeathBehaviour>(FindObjectsSortMode.None);
+        foreach(EnemyDeathBehaviour e in enemyArray) {
+            enemyList.Add(e);
+        }
+        Debug.Log(enemyList.Count);
+        OnEnemyListCreated?.Invoke(this, EventArgs.Empty);
         EnemyDeathBehaviour.OnAnyEnemyDeath += EnemyDeathBehaviour_OnAnyEnemyDeath;
     }
 
@@ -35,16 +40,5 @@ public class EnemyList : MonoBehaviour {
 
     public int GetEnemyListCount() {
         return enemyList.Count;
-    }
-
-    private void UpdateEnemyList() {
-        enemyList = new List<EnemyDeathBehaviour>();
-        foreach(EnemyDeathBehaviour enemy in Resources.FindObjectsOfTypeAll(typeof(EnemyDeathBehaviour)) as EnemyDeathBehaviour[]) {
-            if (!EditorUtility.IsPersistent(enemy.transform.root.gameObject) && !(enemy.hideFlags == HideFlags.NotEditable || enemy.hideFlags == HideFlags.HideAndDontSave)) {
-                enemyList.Add(enemy);
-            }
-        }
-        OnEnemyListUpdate?.Invoke(this, EventArgs.Empty);
-        
     }
 }

@@ -22,9 +22,15 @@ public class EnemyDeathBehaviour : MonoBehaviour
         {
             Debug.LogWarning("HealthSystem is not assigned!");
         }
+        EnemyList.Instance.OnEnemyListCreated += Instance_OnEnemyListCreated;
+
     }
 
-   void CheckAndDestroy()
+    private void Instance_OnEnemyListCreated(object sender, EventArgs e) {
+        gameObject.SetActive(false);
+    }
+
+    void CheckAndDestroy()
     {
         if (healthSystem.HealthPoints <= 0)
         {
