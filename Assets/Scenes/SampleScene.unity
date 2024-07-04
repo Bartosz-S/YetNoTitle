@@ -43203,6 +43203,10 @@ PrefabInstance:
       propertyPath: maxHealthPoints
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5503162172129525144, guid: 4b76aa8f5b059354db1cf6e789d198a5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -998082815, guid: d7b74beeb6e54a6fabef95bde9e5b572, type: 3}
     - target: {fileID: 5558134305635732797, guid: 4b76aa8f5b059354db1cf6e789d198a5, type: 3}
       propertyPath: gameOverUI
       value: 
@@ -43914,6 +43918,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 924264929676892696, guid: 28c364390492a1a43b8a1a919aacc958, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1465314649, guid: 5e1ae24aa54382147bf5176a2b411b44, type: 3}
     - target: {fileID: 986001806323559101, guid: 28c364390492a1a43b8a1a919aacc958, type: 3}
       propertyPath: gameOverUI
       value: 

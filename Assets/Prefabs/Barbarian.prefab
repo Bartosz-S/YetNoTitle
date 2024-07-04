@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.0039529204
       objectReference: {fileID: 0}
+    - target: {fileID: 1574154000258050941, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1295729741, guid: 84c8d7c495c50bd489cd89326f981a06, type: 3}
     - target: {fileID: 4452547442342553361, guid: 7b37355f71d760b4189dfe90d26817e6, type: 3}
       propertyPath: m_Name
       value: Barbarian
@@ -204,3 +208,4 @@ MonoBehaviour:
   attackCooldown: 1
   AttackField: {fileID: 7899708826576717671}
   container: {fileID: 3824259146669382530}
+  canAttack: 1
