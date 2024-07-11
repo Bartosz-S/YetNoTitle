@@ -145,7 +145,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""9af45f98-7605-4a3d-aee2-9c51e9233eae"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -233,7 +233,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0539b0d9-37c2-4b4c-9706-b3b4e3fbd9df"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""path"": ""<Keyboard>/rightCtrl"",
                     ""interactions"": ""Press(pressPoint=1.401298E-45,behavior=2)"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",

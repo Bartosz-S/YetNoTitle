@@ -8,15 +8,20 @@ public class EnemyCounterUI : MonoBehaviour {
     private void Start() {
         EnemyList.Instance.OnEnemyListUpdate += EnemyList_OnEnemyListUpdate;
         EnemyList.Instance.OnEnemyListCreated += EnemyList_OnEnemyListCreated;
+        Debug.Log("EnemyCounterStart");
     }
 
     private void EnemyList_OnEnemyListCreated(object sender, System.EventArgs e) {
         enemyCountText.text = "Enemies left: " + EnemyList.Instance.GetEnemyListCount();
+        Debug.Log("EnemyCounterTextStart");
     }
 
     private void EnemyList_OnEnemyListUpdate(object sender, System.EventArgs e) {
+        Debug.Log("SignalFromEnemyList");
         if (enemyCountText != null) {
-            enemyCountText.text = "Enemies left: " + EnemyList.Instance.GetEnemyListCount();
+        int enemyCountMinusTwo = EnemyList.Instance.GetEnemyListCount();
+            enemyCountText.text = "Enemies left: " + enemyCountMinusTwo;
+            Debug.Log("EnemyCounterSignal");
         }
     }
 }

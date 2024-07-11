@@ -15,7 +15,9 @@ public class GameWinField : MonoBehaviour
     private void Start() {
         listOfPlayers = new List<GameObject>();
         closeGatesSprite.SetActive(true);
+        openGatesSprite.SetActive(false);
         EnemyList.Instance.OnNoMoreEnemies += EnemyList_OnNoMoreEnemies;
+        
     }
 
     private void EnemyList_OnNoMoreEnemies(object sender, EventArgs e) {
