@@ -20,22 +20,28 @@ public class EnemyList : MonoBehaviour {
         Instance = this;
     }
     private void Start() {
+
         enemyList = new List<EnemyDeathBehaviour>();
-        enemyArray = FindObjectsByType<EnemyDeathBehaviour>(FindObjectsSortMode.None);
+        EnemyDeathBehaviour[] enemyArray = Resources.FindObjectsOfTypeAll<EnemyDeathBehaviour>();
+
         foreach(EnemyDeathBehaviour e in enemyArray) {
             enemyList.Add(e);
         }
+
         Debug.Log(enemyList.Count);
         OnEnemyListCreated?.Invoke(this, EventArgs.Empty);
         EnemyDeathBehaviour.OnAnyEnemyDeath += EnemyDeathBehaviour_OnAnyEnemyDeath;
+        Debug.Log("EnemyList start");
     }
 
     private void EnemyDeathBehaviour_OnAnyEnemyDeath(object sender, EventArgs e) {
+        Debug.Log("EnemyList death");
         enemyList.Remove((EnemyDeathBehaviour)sender);
         if (enemyList.Count == 0) {
             OnNoMoreEnemies?.Invoke(this, EventArgs.Empty);
         }
         OnEnemyListUpdate?.Invoke(this, EventArgs.Empty);
+        Debug.Log(enemyList.Count);
     }
 
     public int GetEnemyListCount() {
